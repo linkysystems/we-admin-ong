@@ -108,19 +108,26 @@ module.exports = function(environment) {
         icon: '<i class="fa fa-envelope-o" aria-hidden="true"></i>',
         text: 'Mensagens de contato',
         linkTo: 'site-contacts.index',
-        permission: 'update_site-contact'
+        permission: 'update_site-contact',
+        links: [
+          {
+            icon: '<i class="fa fa-envelope-o" aria-hidden="true"></i>',
+            text: 'Recebidas',
+            linkTo: 'site-contacts.index'
+          },
+          {
+            icon: '<i class="fa fa-envelope" aria-hidden="true"></i>',
+            text: 'Assuntos',
+            linkTo: 'site-contact-forms.index',
+            permission: 'update_site-contact-forms'
+          }
+        ]
       },
       {
         icon: '<i class="fa fa-list-alt" aria-hidden="true"></i>',
         text: 'Formulários',
         linkTo: 'd-forms',
         permission: 'find_form-answer'
-      },
-      {
-        icon: '<i class="fa fa-briefcase" aria-hidden="true"></i>',
-        text: 'Dados da ONG',
-        linkTo: 'settings.project',
-        permission: 'system_settings_update'
       },
       {
         icon: '<i class="fa fa-bars"></i>',
@@ -148,9 +155,35 @@ module.exports = function(environment) {
       },
       {
         icon: '<i class="fa fa-wrench"></i>',
-        text: 'Configurações',
+        text: 'Configurações e dados',
         linkTo: 'settings.index',
-        permission: 'system_settings_update'
+        permission: 'system_settings_update',
+        links: [
+          {
+            icon: '<i class="fa fa-briefcase" aria-hidden="true"></i>',
+            text: 'Dados da organização',
+            linkTo: 'settings.project',
+            permission: 'system_settings_update'
+          },
+          {
+            icon: '<i class="fa fa-wrench"></i>',
+            text: 'Dados do sistema',
+            linkTo: 'settings.index',
+            permission: 'system_settings_update'
+          },
+          {
+            icon: '<i class="fa fa-tachometer" aria-hidden="true"></i>',
+            text: 'Visua e tema',
+            linkTo: 'settings.theme',
+            permission: 'system_settings_update'
+          },
+          {
+            icon: '<i class="fa fa-mixcloud" aria-hidden="true"></i>',
+            text: 'Integrações',
+            linkTo: 'settings.integrations',
+            permission: 'system_settings_update'
+          }
+        ]
       }
     ],
 
