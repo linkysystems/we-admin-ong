@@ -57,6 +57,11 @@ module.exports = function(environment) {
         componentName: 'menu-news-selector'
       },
       {
+        name: 'events',
+        title: 'Eventos',
+        componentName: 'menu-simple-event-selector'
+      },
+      {
         name: 'category',
         title: 'Categorias',
         componentName: 'menu-category-selector'
@@ -84,7 +89,15 @@ module.exports = function(environment) {
         icon: '<i class="fa fa-newspaper-o" aria-hidden="true"></i>',
         text: 'Notícias',
         linkTo: 'news.index',
+        plugin: 'we-plugin-news',
         permission: 'create_news'
+      },
+      {
+        icon: '<i class="fa fa-calendar" aria-hidden="true"></i>',
+        text: 'Eventos',
+        linkTo: 'simple-events.index',
+        plugin: 'we-plugin-simple-event',
+        permission: 'create_simple-event'
       },
       {
         icon: '<i class="fa fa-file-text"></i>',

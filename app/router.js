@@ -29,6 +29,13 @@ Router.map(function() {
     });
   });
 
+  this.route('simple-events', function() {
+    this.route('create');
+    this.route('item', { path: ':id' }, function(){
+
+    });
+  });
+
   this.route('site-contacts', function() {
     this.route('create');
     this.route('item', { path: ':id' }, function(){});
