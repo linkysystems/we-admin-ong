@@ -116,6 +116,8 @@ Router.map(function() {
     this.route('item', { path: ':id' }, function(){});
   });
 
+  this.route('donations');
+
   this.route('not-found', { path: '/*path' });
 });
 

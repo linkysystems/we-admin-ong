@@ -1,0 +1,75 @@
+<div class="row"><div class="col-md-12">
+
+<h1 class="page-header">Configurações de doações</h1>
+
+<p>Nessa página é possível configurar as formas de doação disponíveis no sistema que aparecerão em locais customizados no site usando blocos/widgets.
+<br>Temos 3 opções disponíveis: Pagseguro, Paypal e texto customizado.</p>
+
+<form {{action "save" model.settings on="submit"}}>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default pagseguro">
+        <div class="panel-heading"><img src="/admin/images/uol-64x64.png" width="20"> Pagseguro:</div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label for="{{concat elementId '-donationPagseguroButton'}}">Botão de pagamento:</label>
+              {{textarea id=(concat elementId '-donationPagseguroButton') rows=5 value=model.settings.donationPagseguroButton name="donationPagseguroButton" class="form-control"}}
+              <p class="help-block">Botão de doação gerado no Pagseguro na conta que receberá o pagamento.
+                <br><a href="https://faq.pagseguro.uol.com.br/duvida/como-inserir-um-botao-de-doacao/96" target="_blank">Clique aqui</a> para acessar o tutorial de como gerar o botão de doação.
+              </p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default paypal">
+        <div class="panel-heading"><img src="/admin/images/paypal-64x64.png" width="20"> Paypal:</div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label for="{{concat elementId '-donationPaypalButton'}}">Botão de doação:</label>
+              {{textarea id=(concat elementId '-donationPaypalButton') rows=5 value=model.settings.donationPaypalButton name="donationPaypalButton" class="form-control"}}
+              <p class="help-block">Botão de doação gerado no Paypal na conta que receberá o pagamento.
+                <br><a href="https://www.paypal.com/br/webapps/mpp/buttons" target="_blank">Clique aqui</a> para acessar o tutorial de como gerar o botão de doação.
+              </p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel panel-default pagseguro">
+        <div class="panel-heading"><i class="fa fa-file-text-o" aria-hidden="true"></i> Texto customizado:</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-7">
+              <fieldset>
+                <div class="form-group">
+                  <label>Texto:</label>
+                 {{tinymce-editor
+                    options=editorOptions
+                    value=model.settings.donationCustomText
+                  }}
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col-md-5">
+              <p>Texto customizado, uma boa opção para descrever formas de doação como deposito em conta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-primary">
+        <i class="fa fa-save"></i>
+        Salvar
+      </button>
+    </div>
+  </div>
+</form>
+
+</div></div>
