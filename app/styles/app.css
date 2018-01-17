@@ -81,6 +81,8 @@ table.image-uploader-table {
 
 h1,
 .page-header {
+  margin-top: 0px;
+  padding-top: 10px;
   margin: 20px 0 20px;
   font-size: 24px;
 }

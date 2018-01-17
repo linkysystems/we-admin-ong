@@ -1,5 +1,5 @@
 {
-  "name": "project-admin-spa",
+  "name": "we-admin-ong",
   "private": true,
   "dependencies": {
     "ember": "~2.6.0",

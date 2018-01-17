@@ -8474,6 +8474,14 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
+we-admin-d-form@linkysystems/we-admin-d-form:
+  version "1.0.0"
+  resolved "https://codeload.github.com/linkysystems/we-admin-d-form/tar.gz/c3282c22bf30195c1831c6208965b0ca075243ce"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.3"
+    ember-cli-htmlbars-inline-precompile "^1.0.2"
+
 we-admin-news@linkysystems/we-admin-news:
   version "0.0.0"
   resolved "https://codeload.github.com/linkysystems/we-admin-news/tar.gz/2e4b2843a11b099e40f6dac64a0ae3e7fb9f98c1"
@@ -8482,9 +8490,17 @@ we-admin-news@linkysystems/we-admin-news:
     ember-cli-htmlbars "^2.0.3"
     ember-cli-htmlbars-inline-precompile "^1.0.2"
 
-"we-admin@git+ssh://git@github.com/wejs/we-admin.git":
+we-admin-simple-event@linkysystems/we-admin-simple-event:
   version "0.0.0"
-  resolved "git+ssh://git@github.com/wejs/we-admin.git#65f098bdf13fde8611c795538d70d14e4316be8c"
+  resolved "https://codeload.github.com/linkysystems/we-admin-simple-event/tar.gz/f8cfee9610914b3cc95ffe5a9dc25be2ea5a4dcb"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.3"
+    ember-cli-htmlbars-inline-precompile "^1.0.2"
+
+we-admin@wejs/we-admin#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/wejs/we-admin/tar.gz/7ce416dc489be553165ef0770f5e2b414a009710"
   dependencies:
     ember-cli-babel "^6.9.2"
     ember-cli-htmlbars "^2.0.3"
