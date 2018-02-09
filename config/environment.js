@@ -281,6 +281,7 @@ module.exports = function(environment) {
     ENV.APP.corsWithCreds = false;
     ENV.APP.apiURL = null;
 
+    ENV.GLOBAL_HOST = 'http://localhost:5102';
     ENV.API_HOST = 'http://localhost:5600';
     ENV.imageHost = 'http://localhost:5600';
 
@@ -299,6 +300,7 @@ module.exports = function(environment) {
     ENV.rootURL = '/admin';
     ENV.imageHost = '';
     ENV.API_HOST = '';
+    ENV.GLOBAL_HOST = 'http://shop.linkysystems.com';
     ENV['ember-simple-auth'].serverTokenEndpoint = ENV['API_HOST'] + ENV['ember-simple-auth'].serverTokenEndpoint;
   }
   return ENV;

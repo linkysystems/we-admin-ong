@@ -86,7 +86,11 @@ Router.map(function() {
   this.route('settings', function() {
     this.route('project');
     this.route('integrations');
-    this.route('theme');
+    this.route('theme', function() {
+      this.route('change', function() {
+        this.route('color', { path: ':id' });
+      });
+    });
   });
 
   this.route('site-contact-forms', function() {
