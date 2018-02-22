@@ -1,0 +1,70 @@
+ <div class="row"><div class="col-md-12">
+
+  {{#if model.record.id}}
+    <h1 class="page-header">Editar termo de uso</h1>
+  {{else}}
+    <h1 class="page-header">Registrar termo de uso</h1>
+  {{/if}}
+
+  <form {{action "save" model.record model.alias on="submit"}}>
+    <div class="row">
+      <div class="col-md-8">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">{{t 'content.form.terms.Data'}}</div>
+          <div class="panel-body">
+            <fieldset>
+              <div class="form-group">
+                <label>{{t 'form-content-title'}}*:</label>
+                {{input value=model.record.title class="form-control" placeholder=(t 'form-placeholder-content-title') required="required"}}
+              </div>
+              <div class="form-group">
+                <label>Descrição:</label>
+                {{textarea value=model.record.about class="form-control"}}
+                <p class="help-block">Breve descrição sobre o termo de uso.</p>
+              </div>
+              <div class="form-group">
+                <label>{{t 'form-content-body'}}*:</label>
+                {{field-text-editor value=model.record.body}}
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <fieldset>
+              <div class="form-group">
+                <label>{{t 'form-content-featuredImage'}}:</label>
+                {{image-uploader value=model.record.featuredImage}}
+                <p class="help-block">Imagem opcional que aparece em destaque acima do texto.</p>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">{{t 'content.form.terms.Attachment'}}</div>
+          <div class="panel-body">
+            <fieldset>
+              <div class="form-group">
+                <label>{{t 'form-content-attachment'}}:</label>
+                {{file-uploader value=model.record.attachment multiple=true}}
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="footer-actions">
+          <button class="btn btn-primary">
+            <i class="fa fa-save"></i> Salvar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</div></div>

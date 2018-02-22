@@ -197,6 +197,12 @@ module.exports = function(environment) {
             permission: 'system_settings_update'
           }
         ]
+      },
+      {
+        icon: '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>',
+        text: 'Termos de uso',
+        linkTo: 'terms-of-use',
+        permission: 'edit_terms_of_use'
       }
     ],
 
