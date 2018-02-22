@@ -1,7 +1,7 @@
 {
   "name": "we-admin-ong",
   "private": true,
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "We.js ONG admin to be served at /admin url",
   "directories": {
     "doc": "doc",
