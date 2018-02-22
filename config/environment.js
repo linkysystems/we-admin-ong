@@ -106,6 +106,12 @@ module.exports = function(environment) {
         permission: 'create_content'
       },
       {
+        icon: '<i class="fa fa-map-o"></i>',
+        text: 'Municípios',
+        linkTo: 'municipios.index',
+        permission: 'create_municipio'
+      },
+      {
         icon: '<i class="fa fa-comments-o" aria-hidden="true"></i>',
         text: 'Comentários',
         linkTo: 'comments.index',
