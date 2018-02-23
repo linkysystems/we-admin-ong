@@ -8423,9 +8423,9 @@ we-admin-simple-event@linkysystems/we-admin-simple-event#v0.0.1:
     ember-cli-htmlbars "^2.0.3"
     ember-cli-htmlbars-inline-precompile "^1.0.2"
 
-we-admin@wejs/we-admin#v1.0.5:
-  version "1.0.5"
-  resolved "https://codeload.github.com/wejs/we-admin/tar.gz/15e06395bd6dd0b07f20865a0998fc303c6738a9"
+we-admin@wejs/we-admin#v1.0.7:
+  version "1.0.7"
+  resolved "https://codeload.github.com/wejs/we-admin/tar.gz/40474f781c061b9e4b960bf20d1998a3b99ee2bf"
   dependencies:
     ember-cli-babel "^6.11.0"
     ember-cli-htmlbars "^2.0.3"

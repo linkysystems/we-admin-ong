@@ -59,7 +59,7 @@ module.exports = function(environment) {
       {
         name: 'events',
         title: 'Eventos',
-        componentName: 'menu-simple-event-selector'
+        componentName: 'menu-simple-events-selector'
       },
       {
         name: 'category',
