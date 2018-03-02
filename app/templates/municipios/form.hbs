@@ -75,6 +75,26 @@
         </div>
       </div>
 
+      {{#acl-can permission='manage_municipio'}}
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>Editors:</label>
+              {{#power-select-multiple
+                search=(action "searchEditors")
+                selected=model.record.editors
+                onchange=(action (mut model.record.editors))
+                as |editor|
+              }}
+                {{editor.displayName}}
+              {{/power-select-multiple}}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      {{/acl-can}}
+
       <div class="panel panel-default">
         <div class="panel-heading">
           <i class="fa fa-globe" aria-hidden="true"></i> {{t 'content.form.publish.Title'}}
@@ -119,7 +139,7 @@
           </fieldset>
         </div>
       </div>
-
+      {{#acl-can permission='update_url-alia'}}
       <div class="panel panel-default">
         <div class="panel-heading"><i class="fa fa-random"></i> URL</div>
         <div class="panel-body">
@@ -130,6 +150,7 @@
           </div>
         </div>
       </div>
+      {{/acl-can}}
     </div>
 
     <div class="col-md-12">

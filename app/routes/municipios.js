@@ -32,6 +32,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     save(record, alias) {
       record.save()
       .then( function saveAlias(content) {
+        if (
+          !alias ||
+          !this.get('acl').can('update_url-alia')
+        ) {
+          return content;
+        }
+
         return alias
         .save()
         .then( ()=> {

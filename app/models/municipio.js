@@ -14,12 +14,19 @@ export default DS.Model.extend({
   showInLists: DS.attr('boolean', {
     defaultValue: true
   }),
+
   name: DS.attr('string'),
   about: DS.attr('string'),
   body: DS.attr('string'),
   creator: DS.belongsTo('user', {
     async: true
   }),
+
+  editors: DS.hasMany('user', {
+    async: true,
+    inverse: 'municipiosEditorIn'
+  }),
+
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
   publishedAt: DS.attr('date'),

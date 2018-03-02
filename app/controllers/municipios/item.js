@@ -27,6 +27,12 @@ export default Ember.Controller.extend({
         return;
       }
       this.get('model.record').set(field, dates[0]);
+    },
+
+    searchEditors(term) {
+      return this.get('store').query('user', {
+        displayName_contains: term
+      });
     }
   }
 });

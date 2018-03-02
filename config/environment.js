@@ -83,7 +83,7 @@ module.exports = function(environment) {
         icon: '<i class="fa fa-bar-chart"></i>',
         text: 'Dashboard',
         linkTo: 'index',
-        permission: true
+        permission: 'view_dashboard'
       },
       {
         icon: '<i class="fa fa-newspaper-o" aria-hidden="true"></i>',
@@ -109,7 +109,7 @@ module.exports = function(environment) {
         icon: '<i class="fa fa-map-o"></i>',
         text: 'Municípios',
         linkTo: 'municipios.index',
-        permission: 'create_municipio'
+        permission: 'find_municipio'
       },
       {
         icon: '<i class="fa fa-comments-o" aria-hidden="true"></i>',
@@ -158,13 +158,14 @@ module.exports = function(environment) {
         icon: '<i class="fa fa-tags"></i>',
         text: 'Categorias e Tags',
         linkTo: 'vocabulary',
-        roles: ['editor']
+        roles: ['editor'],
+        permission: 'update_vocabulary'
       },
       {
         icon: '<i class="fa fa-users"></i>',
         text: 'Usuários',
         linkTo: 'users.index',
-        permission: 'find_user'
+        permission: 'update_user'
       },
       {
         icon: '<i class="fa fa-envelope" aria-hidden="true"></i>',
