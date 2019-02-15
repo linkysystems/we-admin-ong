@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import config from './config/environment';
+import EmberRouter from '@ember/routing/router';
 
-const Router = Ember.Router.extend({
+const Router = EmberRouter.extend({
   location: config.locationType
 });
 
@@ -118,7 +118,7 @@ Router.map(function() {
       this.route('edit');
       this.route('use');
       this.route('answers', function() {
-        this.route('item', { path: ':answerId' }, function(){});
+        this.route('item', { path: ':answer_id' }, function(){});
       });
     });
   });

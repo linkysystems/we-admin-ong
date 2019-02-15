@@ -1,16 +1,18 @@
-import Ember from 'ember';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+import { hash } from 'rsvp';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
-  term: Ember.inject.service(),
+export default Route.extend(AuthenticatedRouteMixin, {
+  term: inject(),
 
   model() {
-    return {
+    return hash({
       record: this.store.createRecord('content', {
         published: true
       }),
       categories: this.get('term').getSystemCategories()
-    };
+    });
   },
   actions: {
     save(record) {

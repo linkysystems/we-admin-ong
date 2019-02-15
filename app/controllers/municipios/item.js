@@ -1,9 +1,10 @@
-import Ember from 'ember';
-import ENV from "../../config/environment";
+import ENV from '../../config/environment';
+import Controller from '@ember/controller';
+import { inject } from '@ember/service';
 
-export default Ember.Controller.extend({
-  ajax: Ember.inject.service(),
-  session: Ember.inject.service('session'),
+export default Controller.extend({
+  ajax: inject(),
+  session: inject('session'),
 
   actions: {
     searchCategoryTerms(term) {

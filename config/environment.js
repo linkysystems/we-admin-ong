@@ -1,8 +1,9 @@
-/* jshint node: true */
+'use strict';
+
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'we-admin-ong',
-    environment: environment,
+    environment,
     rootURL: '/admin/',
     imageHost: 'http://localhost:5600',
     locationType: 'hash',
@@ -39,7 +40,6 @@ module.exports = function(environment) {
       // }
       ]
     },
-
     menuLinkSelectorComponents: [
       {
         name: 'content',
@@ -77,7 +77,6 @@ module.exports = function(environment) {
         componentName: 'menu-user-links-selector'
       }
     ],
-
     adminMenu: [
       {
         icon: '<i class="fa fa-bar-chart"></i>',
@@ -214,14 +213,16 @@ module.exports = function(environment) {
     ],
 
     EmberENV: {
-      EXTEND_PROTOTYPES: {
-        Date: false,
-      },
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -266,6 +267,7 @@ module.exports = function(environment) {
       version: 4
     }
   };
+
   ENV['ember-simple-auth'] = {
     identificationField: 'email',
     passwordField: 'password',
@@ -279,7 +281,6 @@ module.exports = function(environment) {
     store: 'simple-auth-session-store:cookie', // optional
     crossOriginWhitelist: ['http://localhost:5600']
   };
-
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -300,21 +301,27 @@ module.exports = function(environment) {
 
     ENV['ember-simple-auth'].serverTokenEndpoint = ENV['API_HOST'] + ENV['ember-simple-auth'].serverTokenEndpoint;
   }
+
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootURL = '/';
     ENV.locationType = 'none';
+
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
+
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
+
   if (environment === 'production') {
+    // here you can enable a production-specific feature
     ENV.rootURL = '/admin';
     ENV.imageHost = '';
     ENV.API_HOST = '';
     ENV.GLOBAL_HOST = 'https://shop.linkysystems.com';
     ENV['ember-simple-auth'].serverTokenEndpoint = ENV['API_HOST'] + ENV['ember-simple-auth'].serverTokenEndpoint;
   }
+
   return ENV;
 };

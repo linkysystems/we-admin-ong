@@ -1,18 +1,15 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject } from '@ember/service';
+import { computed } from '@ember/object';
 
-let ENV, editorLocaleCache, editorLocaleUrlCache;
+let editorLocaleCache, editorLocaleUrlCache;
 
-export default Ember.Controller.extend({
-  ajax: Ember.inject.service(),
-  session: Ember.inject.service('session'),
-  settings: Ember.inject.service('settings'),
+export default Controller.extend({
+  ajax: inject(),
+  session: inject('session'),
+  settings: inject('settings'),
 
-  init() {
-    this._super(...arguments);
-    ENV = Ember.getOwner(this).resolveRegistration('config:environment');
-  },
-
-  editorOptions: Ember.computed('settings.data', {
+  editorOptions: computed('settings.data', {
     get() {
       const opts = {
         min_height: 150,
