@@ -46,7 +46,7 @@
     "ember-data": "~3.4.0",
     "ember-export-application-global": "^2.0.0",
     "ember-flatpickr": "2.12.0",
-    "ember-i18n": "5.3.1",
+    "ember-intl": "^3.5.0",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-models-table": "2.3.1",
@@ -61,9 +61,9 @@
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
-    "we-admin": "wejs/we-admin#v1.0.24",
-    "we-admin-d-form": "linkysystems/we-admin-d-form#v1.0.1",
-    "we-admin-news": "linkysystems/we-admin-news#v1.0.0",
+    "we-admin": "wejs/we-admin#v1.0.30",
+    "we-admin-d-form": "linkysystems/we-admin-d-form#v1.1.2",
+    "we-admin-news": "linkysystems/we-admin-news#v1.0.1",
     "we-admin-simple-event": "linkysystems/we-admin-simple-event#v0.0.1"
   },
   "engines": {
