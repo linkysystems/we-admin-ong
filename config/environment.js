@@ -5,8 +5,10 @@ module.exports = function(environment) {
     modulePrefix: 'we-admin-ong',
     environment,
     rootURL: '/admin/',
-    imageHost: 'http://localhost:5600',
     locationType: 'hash',
+    API_HOST: '',
+    imageHost: 'http://localhost:5600',
+    GLOBAL_HOST: 'https://shop.linkysystems.com',
     i18n: {
       // defaultLocale: 'en-us'
       defaultLocale: 'pt-br'
@@ -209,6 +211,12 @@ module.exports = function(environment) {
         text: 'Termos de uso',
         linkTo: 'terms-of-use',
         permission: 'edit_terms_of_use'
+      },
+      {
+        icon: '<i class="fa fa-globe" aria-hidden="true"></i>',
+        text: 'Tradução',
+        linkTo: 't.index',
+        permission: 'create_t'
       }
     ],
 
@@ -279,7 +287,7 @@ module.exports = function(environment) {
 
     authorizer: 'authorizer:custom',
     store: 'simple-auth-session-store:cookie', // optional
-    crossOriginWhitelist: ['http://localhost:5600']
+    crossOriginWhitelist: [( process.env.API_HOST || 'http://localhost:5600' )]
   };
 
   if (environment === 'development') {

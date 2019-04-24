@@ -4974,13 +4974,13 @@ ember-maybe-in-element@^0.2.0:
   dependencies:
     ember-cli-babel "^7.1.0"
 
-ember-models-table@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/ember-models-table/-/ember-models-table-2.3.1.tgz#98fd736e5ecf4df29e73d04614bcdb424f784f22"
-  integrity sha512-+v002sVDP8EN1KlsBcUV+gJfdn2RmzE2+6F9GO/tKiNmDIcgNah2hAMnmeTIm694O8A9koezUdnm4HE78XNrbA==
+ember-models-table@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/ember-models-table/-/ember-models-table-2.9.0.tgz#e34a800f217de28d63769b7f9a6efa19beea2a24"
+  integrity sha512-coPg2PLq3B2LtZyBtOjfVbjPfv+SW8+TQEzsiW5JuWbBzuQj9+h1wV5Of4yOiT+EgpcWvzin8C39ausJ0FZ0MQ==
   dependencies:
-    ember-cli-babel "^6.8.1"
-    ember-cli-htmlbars "^2.0.1"
+    ember-cli-babel "^7.1.2"
+    ember-cli-htmlbars "^3.0.0"
     ember-composable-helpers "^2.0.3"
 
 ember-moment@7.8.1:
