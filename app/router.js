@@ -132,6 +132,11 @@ Router.map(function() {
     this.route('item', { path: ':id' }, function(){});
   });
 
+  this.route('gallery', function() {
+    this.route('create');
+    this.route('item', { path: ':id' }, function(){});
+  });
+
   this.route('terms-of-use');
 
   this.route('donations');

@@ -1,0 +1,26 @@
+---
+version: '3'
+services:
+  ember:
+    image: danlynn/ember-cli:2.18.2
+    volumes:
+      - .:/myapp
+      - .bash_history:/root/.bash_history
+    tmpfs:
+      - /myapp/tmp
+    ports:
+      - "4200:4200"
+      - "7020:7020"
+      - "7357:7357"
+    environment:
+      - API_HOST=http://${MIP}:5600
+  cmd:
+    image: danlynn/ember-cli:2.18.2
+    volumes:
+      - .:/myapp
+      - .bash_history:/root/.bash_history
+    tmpfs:
+      - /myapp/tmp
+    environment:
+      - API_HOST=http://${MIP}:5600
+    command: tail -f /dev/null

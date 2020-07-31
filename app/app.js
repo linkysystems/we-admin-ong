@@ -15,6 +15,7 @@ let App = Application.extend({
   Resolver
 });
 
+
 loadInitializers(App, config.modulePrefix);
 
 Controller.reopen({

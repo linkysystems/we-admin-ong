@@ -94,6 +94,13 @@ module.exports = function(environment) {
         permission: 'create_news'
       },
       {
+        icon: '<i class="fa fa-object-group" aria-hidden="true"></i>',
+        text: 'Galerias',
+        linkTo: 'gallery.index',
+        plugin: 'we-plugin-gallery',
+        permission: 'create_gallery'
+      },
+      {
         icon: '<i class="fa fa-calendar" aria-hidden="true"></i>',
         text: 'Eventos',
         linkTo: 'simple-events.index',
