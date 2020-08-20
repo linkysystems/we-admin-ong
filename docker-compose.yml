@@ -2,7 +2,7 @@
 version: '3'
 services:
   ember:
-    image: danlynn/ember-cli:2.18.2
+    image: danlynn/ember-cli:3.4.2
     volumes:
       - .:/myapp
       - .bash_history:/root/.bash_history
@@ -15,7 +15,7 @@ services:
     environment:
       - API_HOST=http://${MIP}:5600
   cmd:
-    image: danlynn/ember-cli:2.18.2
+    image: danlynn/ember-cli:3.4.2
     volumes:
       - .:/myapp
       - .bash_history:/root/.bash_history
