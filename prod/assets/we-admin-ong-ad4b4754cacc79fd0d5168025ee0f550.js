@@ -18324,6 +18324,6 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("we-admin-ong/app")["default"].create({"name":"we-admin-ong","version":"1.3.6+122cbd1d"});
+            require("we-admin-ong/app")["default"].create({"name":"we-admin-ong","version":"1.3.7+e3beb1b0"});
           }
         
