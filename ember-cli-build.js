@@ -24,13 +24,6 @@ module.exports = function(defaults) {
       'bootstrapVersion': 3,
       'importBootstrapFont': true,
       'importBootstrapCSS': true
-    },
-
-    'ember-cli-uglify': {
-      enabled: false,
-      uglify: {
-        compress: false // added this to workaround the issue
-      }
     }
   });
 
